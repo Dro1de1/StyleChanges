@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <link id="stylesheetNice" rel="stylesheet" type="text/css" media="screen" href="stylesheets/headerV1.css" />
+    <link id="stylesheetColor" rel="stylesheet" type="text/css" media="screen" href="stylesheets/colorThemes/ThemeV1.css"
+        onload="changeThemeColor()" />
+    <meta name="theme-color" content="rgb(0, 241, 141)">
+    <title>idk dude</title>
+
+</head>
+
+<body>
+    <div style="text-align: center;background:#ffffff;" class="logowrapper">
+        <a href="#" id="logo">
+            <img src="UnterschriftAlpha.png" alt="logo" style=""><!-- style="width: 200px;height: 50px;"-->
+        </a>
+    </div>
+    <div class="navigation">
+        <nav>
+            <!--
+            <a href="#">
+                        <img src="Unbenannt.png" alt="logo" style="width: 200px;height: 50px;">
+                    </a>
+-->
+            <a href="#" onclick="change(0)" id="active"><span>stop</span></a><a href="#content" onclick="change(1)"><span>content</span></a><a
+                href="#credits" onclick="change(2)"><span>credits</span></a>
+        </nav>
+    </div>
+    <div class="content" id="content">
+        <h1>Hello</h1>
+        <p>how are you? I'm fine</p>
+        <div class="onebox" style="padding: 10px;background-color:#e6e6e6; border: 2px solid #00810b;top:0;">
+            <h3>
+                <span>hello</span>
+            </h3>
+            <p>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam officiis dolore, veritatis,
+                    dolorum
+                    consequatur non at odio dicta ea amet recusandae ipsa inventore perspiciatis sequi numquam
+                    praesentium
+                    libero accusantium corporis.
+                </span>
+            </p>
+        </div>
+        <script language="javascript">
+            function createContent() {
+                /*
+                    function getRandomColor() {
+                        var letters = '0123456789ABCDEF';
+                        var color = '#';
+                        for (var i = 0; i < 6; i++) {
+                            color += letters[Math.floor(Math.random() * 16)];
+                        }
+                        return color;
+                    }
+                */
+                var bgColor = ["c2a939", "bb4054", "ac3dbb", "3eaebd", "4ecf59"];
+                var bColor = ["816900", "790a1d", "720081", "007281", "00810b"];
+                var text = "";
+
+                function getNumber() {
+                    var i = Math.floor(Math.random() * 5);
+                    return i;
+                }
+
+                function getContent(n) {
+                    var content = "<p  class='onebox' style='background-color:#" + bgColor[n] + ";border: 2px solid #" +
+                        bColor[n] +
+                        ";'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam officiis dolore, veritatis, dolorum consequatur non at odio dicta ea amet recusandae ipsa inventore perspiciatis sequi numquam praesentium libero accusantium corporis.</p>";
+                    return content;
+                }
+                for (i = 0; i < 20; i++) {
+                    b = getNumber()
+                    text += getContent(b);
+                }
+                return text
+            }
+            document.getElementsByClassName("content")[0].innerHTML += createContent();
+        </script>
+    </div>
+    <button class="debug" onclick="toggleCredits('close')">Debug</button>
+    <div class="credits close" id="credits">
+        <div>
+            <h4 style="display: inline-block;"><span>Change Header:</span></h4>
+            <button onclick="changeHeader(1)"><span>1</span></button>
+            <button onclick="changeHeader('2Left')"><span>2left</span></button>
+            <button onclick="changeHeader(2)"><span>2right</span></button>
+            <button onclick="changeHeader(3)"><span>3</span></button>
+            <button onclick="changeHeader(4)"><span>4</span></button>
+            <button onclick="changeHeader(5)"><span>5</span></button>
+            <button onclick="changeHeader(0)"><span>nothing</span></button>
+        </div>
+        <div>
+            <h4 style="display:inline-block;">Do not do it:</h4>
+            <button onclick="changeThemeColor()"><span>changeThemeColor</span></button>
+            <button onclick="changeThemeColorBg()"><span>changeThemeColorBg</span></button>
+        </div>
+        <div>
+            <h4 style="display:inline-block;"><span>Change Color-Theme:</span></h4>
+            <button onclick="changeColorTheme(1)"><span>orange</span></button>
+            <button onclick="changeColorTheme(2)"><span>cyan</span></button>
+            <button onclick="changeColorTheme(3)"><span>magenta</span></button>
+            <button onclick="changeColorTheme(4)"><span>green</span></button>
+            <button onclick="changeColorTheme(0)"><span>nothing</span></button>
+        </div>
+    </div>
+</body>
+
+</html>

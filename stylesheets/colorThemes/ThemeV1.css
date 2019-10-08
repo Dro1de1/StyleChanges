@@ -1,0 +1,48 @@
+.navigation {
+    background-color: #202020;
+    box-shadow: 0px 0px 4px #0000008c;
+
+}
+.navigation nav a {
+    color: #ffffff88;
+    border-bottom-color:#ffffff00;
+
+}
+.navigation nav a:hover{
+    color: #ffffffda;
+    border-bottom-color:#ffffff00;
+
+}
+.navigation nav a#active {
+    color: #f1b100;
+    border-bottom-color:#f1b100;
+    animation: AnimationName2 5s ease infinite;
+
+}
+
+html {
+    /*
+    background-color: #f1b100;
+    background-image: linear-gradient(#ffbf00,#ff0000);
+    */
+    background: linear-gradient(148deg, #ffbf00, #ff0000);
+    background-size: 400% 400%;
+
+    animation: AnimationName 5s ease infinite;
+    
+    
+
+}
+@keyframes AnimationName {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 0%}
+    100%{background-position:0% 0%}
+}
+@keyframes AnimationName2 {
+    50%{color:white;border-bottom-color:white;}
+}
+/*
+.content{
+    background:#043a21;
+}
+*/

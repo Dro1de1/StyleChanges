@@ -1,0 +1,27 @@
+.navigation {
+    background-color: #202020;
+/*    box-shadow: 0px 0px 4px #0000008c;*/
+    box-shadow: 0 4px 2px -2px #0000008c;
+
+}
+.navigation nav a {
+    color: #ffffff88;
+    border-bottom-color:#ffffff00;
+
+}
+.navigation nav a:hover{
+    color: #ffffffda;
+    border-bottom-color:#ffffff00;
+
+}
+.navigation nav a#active {
+    color: #9df100;
+    border-bottom-color:#9df100;
+    
+
+}
+html {
+    background-color: #9df100 ;
+    background-image: linear-gradient(#9df100,#f1ed00);
+    
+}
